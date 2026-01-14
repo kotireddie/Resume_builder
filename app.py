@@ -6,10 +6,14 @@ Step-by-step resume optimization workflow using GPT.
 
 import os
 import streamlit as st
+from dotenv import load_dotenv
 from utils.latex_extractor import extract_from_latex, extract_from_latex_string
 from utils.llm_jd import extract_and_analyze_jd
 from utils.llm_resume import rewrite_bullets, suggest_skills
 from utils.latex_editor import update_latex_resume
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 # Validate API key at startup
